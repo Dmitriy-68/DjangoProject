@@ -1,0 +1,23 @@
+{% extends 'fourth_task/menu.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block pagename %}
+    Витрина
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+    {% block content %}
+        <ul>
+            {% for phone in phones %}
+                <li>
+                    <h2>{{ phone }} <button>Купить</button></h2>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endblock %}
